@@ -4,7 +4,12 @@ import Basedd as dbase
 import Prodsave as ps
 import time
 db=dbase.dbConnection()
-consulta = input("Ingrese el nombre del artículo: ")#Nombre del producto que se va a buscar
+while(True):
+    consulta = input("Ingrese el nombre del artículo: ")#Nombre del producto que se va a buscar
+    if(len(consulta)==0):
+        print("No puede dejar vacio")
+    else:
+        break
 driver = webdriver.Chrome()
 driver.get("https://ec.ebay.com/")
 cuadro_busqueda=driver.find_element(by=By.CSS_SELECTOR, value="#gh-ac")
