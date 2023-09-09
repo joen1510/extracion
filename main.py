@@ -4,6 +4,7 @@ import Basedd as dbase
 import Prodsave as ps
 import time
 db=dbase.dbConnection()
+#Validamos que no ingrese en blanco
 while(True):
     consulta = input("Ingrese el nombre del artículo: ")#Nombre del producto que se va a buscar
     if(len(consulta)==0):
